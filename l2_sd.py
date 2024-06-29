@@ -1,16 +1,18 @@
 import math
 
+a,n,sd,ave = 0,0,0,0
+
 n = int(input("how many numbers? "))
-x,a = [], 0
+x = [0]*n
 
 for i in range(n):
-    t = int(input("ente>> "))
-    x.append(t)
+    x[i] = int(input("n>>"))
+    ave += x[i]
     
-m = sum(x) / n 
+ave = ave / n 
 
 for j in x:
-    a += math.pow((j-m), 2)
+    a += math.pow((j-ave), 2)
     
 sd = math.sqrt(a/n)
 
